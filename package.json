@@ -26,6 +26,7 @@
         "@commitlint/cli": "^19.6.0",
         "@commitlint/config-conventional": "^19.6.0",
         "@eslint/js": "^9.15.0",
+        "@types/express": "^5.0.0",
         "@types/node": "^22.9.1",
         "eslint": "^9.15.0",
         "husky": "^9.1.7",
@@ -39,6 +40,7 @@
     "dependencies": {
         "cross-env": "^7.0.3",
         "dotenv-flow": "^4.1.0",
-        "eslint-config-prettier": "^9.1.0"
+        "eslint-config-prettier": "^9.1.0",
+        "express": "^4.21.1"
     }
 }
