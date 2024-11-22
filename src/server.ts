@@ -1,11 +1,10 @@
 import app from './app'
 import config from './config/config'
-
+import logger from './util/logger'
 const server = app.listen(config.PORT)
 ;(() => {
     try {
-        // eslint-disable-next-line no-console
-        console.info(`APPLICATION_STARTES`, {
+        logger.info(`APPLICATION_STARTES`, {
             meta: {
                 PORT: config.PORT,
                 ENV: config.ENV,
@@ -13,14 +12,12 @@ const server = app.listen(config.PORT)
             }
         })
     } catch (err) {
-        // eslint-disable-next-line no-console
-        console.error(`APPLICATION_STARTES_FAILED`, {
+        logger.error(`APPLICATION_STARTES_FAILED`, {
             meta: err
         })
         server.close((error) => {
             if (error) {
-                // eslint-disable-next-line no-console
-                console.error(`APPLICATION_ERROR`, { meta: error })
+                logger.error(`APPLICATION_ERROR`, { meta: error })
             }
             process.exit(1)
         })
